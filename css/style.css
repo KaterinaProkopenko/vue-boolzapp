@@ -1,0 +1,23 @@
+main section.my-top-bg{
+    width: 100%;
+    height: 15vh;
+    background-color: #009688;
+}
+
+main section.my-bottom-bg{
+    width: 100%;
+    height: 85vh;
+    background-color: #DBDBD2;
+}
+
+main section.my-container-window{
+    width: 100%;
+    height: 100%;
+}
+
+section.my-container-window div.app-window{
+    width: 1000px;
+    height: 690px;
+    background-color: coral;
+    border: 5px solid #cececc;
+}
