@@ -27,7 +27,7 @@ div.left-container{
 
 div.user-panel{
     height: 50px;
-    background-color: #DDDDDD;
+    background-color: #EAE8E8;
     border-right: 2px solid lightgray;
 }
 
@@ -44,7 +44,8 @@ div.user-panel div.user-icons{
     margin-top: .3rem;
 }
 
-div.chat-header-right div.user-icons{
+div.chat-header-right div.user-icons,
+div.chat-bottom div.chat-bottom-icon{
     font-size: 1.1rem;
 }
 
@@ -63,12 +64,18 @@ div#notification-icon{
 div.notifications-container p,
 div.notifications-container a,
 div.user div p,
-div.time p{
+div.time p,
+div.message p.message-content,
+div.chat-bottom input{
     font-size: .8rem;
 }
 
 div.notifications-container a{
     color: gray;
+}
+
+div.notifications-container a:hover {
+    color: white;
 }
 
 div#search-chat{
@@ -85,7 +92,7 @@ div#search-chat input{
 div.chat-items-container{
     background-color: white;
     height: 540px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 div.chat-items-container div.chat-item{
@@ -101,10 +108,45 @@ div.user img.chat-item-photo {
     width: 45px;
 }
 
-div.right-container div.chat-header{
-    background-color: #DDDDDD;
+div.right-container div.chat-header,
+div.right-container div.chat-bottom{
     height: 50px;
 }
 
+div.right-container div.chat-header{
+    background-color: #EAE8E8;
+}
 
+div.right-container div.chat-main{
+    height: 580px;
+    background-image: url(../img/mine.jpg);
+    background-size: inherit;
+    overflow-y: scroll;
+}
 
+div.message {
+    border-radius: 7px;
+}
+
+div.my-message{
+    background-color: #D5F9BA;
+}
+
+div.item-message{
+    background-color: white;
+}
+
+div.right-container div.chat-bottom{
+    background-color: #F3EEEA;
+}
+
+div.chat-bottom input {
+    height: 40px;
+    width: 530px;
+    border: 1px solid #F3EEEA;
+    border-radius: 5px;
+}
+
+div.chat-bottom div.chat-bottom-icon{
+    width: 65px;
+}
