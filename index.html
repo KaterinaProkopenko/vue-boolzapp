@@ -24,8 +24,34 @@
         <section class="my-container-window d-flex justify-content-center align-items-center position-absolute top-0">
             <div class="my-container app-window">
                 <div class="row gx-0">
-                    <div class="col-4 h-100 bg-primary p-0">sad</div>
-                    <div class="col-8 h-100 bg-success p-0">ad</div>
+                    <div class="col-4 h-100 p-0">
+                        <!-- User panel -->
+                        <div class="user-panel d-flex justify-content-between">
+                            <div class="user-info p-1">
+                                <img class="rounded-circle align-middle" id="my-photo" src="img/avatar_io.jpg" alt="My photo">
+                                <p class="d-inline fw-bold">Sofia</p>
+                            </div>
+                            <div class="user-icons p-2">
+                                <div class="d-inline p-2"><i class="fa-solid fa-circle-notch"></i></div>
+                                <div class="d-inline p-2"><i class="fa-solid fa-message"></i></div>
+                                <div class="d-inline p-2"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+                        </div>
+
+                        <!-- Notifications -->
+                        <div class="notifications-container d-flex align-items-center">
+                            <div id="notification-icon" class="p-2 rounded-circle text-center mx-3">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div class="lh-1">
+                                <p class="fw-bold m-0">Ricevi notifiche di nuovi messaggi</p>
+                                <a href="#">Attiva notifiche desktop</a>
+                            </div>
+                        </div>
+
+                        <!-- Input search -->
+                    </div>
+                    <div class="col-8 h-100 p-0"></div>
                 </div>
             </div>
         </section>
