@@ -18,23 +18,34 @@ main section.my-container-window{
 section.my-container-window div.app-window{
     width: 1000px;
     height: 690px;
-    background-color: coral;
     border: 5px solid #cececc;
+}
+
+div.left-container{
+    height: 690px;
 }
 
 div.user-panel{
     height: 50px;
     background-color: #DDDDDD;
+    border-right: 2px solid lightgray;
 }
 
-img#my-photo{
+img.user-photo{
     width:40px;
     height:40px
 }
 
-div.user-panel div.user-icons{
-    font-size: 1.2rem;
+div.user-icons{
     color:#B0B0B0;
+}
+
+div.user-panel div.user-icons{
+    margin-top: .3rem;
+}
+
+div.chat-header-right div.user-icons{
+    font-size: 1.1rem;
 }
 
 div.notifications-container{
@@ -50,10 +61,50 @@ div#notification-icon{
 }
 
 div.notifications-container p,
-div.notifications-container a{
+div.notifications-container a,
+div.user div p,
+div.time p{
     font-size: .8rem;
 }
 
 div.notifications-container a{
     color: gray;
 }
+
+div#search-chat{
+    width: 100%;
+    height: 35px;
+}
+
+div#search-chat input{
+    width: 260px;
+    height: 34px;
+    border: 1px solid white;
+}
+
+div.chat-items-container{
+    background-color: white;
+    height: 540px;
+    overflow: scroll;
+}
+
+div.chat-items-container div.chat-item{
+    height: 55px;
+}
+
+.active-chat-item{
+    background-color: #E9EBEB;
+}
+
+div.user img.chat-item-photo {
+    height: 45px;
+    width: 45px;
+}
+
+div.right-container div.chat-header{
+    background-color: #DDDDDD;
+    height: 50px;
+}
+
+
+
