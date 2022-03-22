@@ -66,7 +66,8 @@ div.notifications-container a,
 div.user div p,
 div.time p,
 div.message p.message-content,
-div.chat-bottom input{
+div.chat-bottom input,
+div#search-chat input{
     font-size: .8rem;
 }
 
@@ -99,7 +100,7 @@ div.chat-items-container div.chat-item{
     height: 55px;
 }
 
-.active-chat-item{
+div.active-chat-item{
     background-color: #E9EBEB;
 }
 
