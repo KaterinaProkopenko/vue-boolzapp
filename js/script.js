@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
+        currentContactIndex: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -23,7 +24,7 @@ const app = new Vue({
                         status: 'received'
                     }
                 ],
-            },
+            },      
             {
                 name: 'Fabio',
                 avatar: '_2',
@@ -163,16 +164,15 @@ const app = new Vue({
                     }
                 ],
             }
-        ]
+        ],
     },
 
     methods: {
         activeChat(indexActive){
-            this.contacts[indexActive].visible = !this.contacts[indexActive].visible;
-            console.log(this.contacts[indexActive].visible);
+            this.currentContactIndex = indexActive;
         },
 
-        
+
     }
 })
 
