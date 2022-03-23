@@ -184,16 +184,18 @@ const app = new Vue({
 
                 this.contacts[activeIndex].messages.push(newSentMessage);
 
-                setTimeout(this.activeContactAnswer());
 
                 this.clearInput();
+
+                setTimeout(function() { 
+                    const answerMessage = 
+                        {
+                        message: 'Ok',
+                        status: 'received'
+                        }
+                    this.contacts[activeIndex].messages.push(answerMessage); 
+                }.bind(this), 1000)
                 
-                /* document.querySelector('div.chat-main').innerHTML += 
-                `<div class="row justify-content-end p-0 m-0">
-                    <div class="col-5 message my-message p-0 my-2">
-                        <p class="message-content m-0 mb-1 p-2">${newSentMessage.message}</p>
-                    </div>
-                </div>`; */
 
             } else {
                 console.log('Attenzione: la stringa è vuota. Inserisci qualcosa.') 
@@ -203,17 +205,8 @@ const app = new Vue({
 
         clearInput(){
             this.newMessage = '';
-        },
-
-        activeContactAnswer(){
-            /* const answerMessage = {
-                message: 'Ok',
-                status: 'received'
-            }
-            this.contacts[activeIndex].messages.push(answerMessage); */
-
-            console.log('ciao')
         }
     },
+    
 });
 
