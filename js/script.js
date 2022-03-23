@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
+        searchName: '',
         currentContactIndex: 0,
         newMessage: '',
         contacts: [
@@ -205,6 +206,16 @@ const app = new Vue({
 
         clearInput(){
             this.newMessage = '';
+        },
+
+        filterContact(){
+            if(this.searchName.trim() !== ""){  
+               this.contacts.forEach( element => {
+                   element.visible = element.name.includes(this.searchName);
+               })
+            } else {
+                console.log('Attenzione: la stringa è vuota. Inserisci qualcosa.') 
+            }
         }
     },
     
