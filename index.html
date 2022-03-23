@@ -19,7 +19,6 @@
 </head>
 <body>
     <main id="app" class="position-relative">
-        {{currentContactIndex}}
         <section class="my-top-bg"></section>
         <section class="my-bottom-bg"></section>
         <section class="my-container-window d-flex justify-content-center align-items-center position-absolute top-0">
@@ -100,7 +99,7 @@
                         </div>
                         <div class="chat-main pt-5 px-5">
                             <div class="row p-0 m-0" :class="(element.status == 'sent') ? 'justify-content-end' : 'justify-content-start'" v-for="(element, index) in contacts[currentContactIndex].messages">
-                                <div class="col-5 message  p-0 my-2" :class="(element.status == 'sent') ? 'my-message' : 'item-message'">
+                                <div class="col-5 message p-0 my-2" :class="(element.status == 'sent') ? 'my-message' : 'item-message'">
                                     <p class="message-content m-0 mb-1 p-2">{{element.message}}</p>
                                 </div>
                             </div>
@@ -110,7 +109,7 @@
                             <div class="px-4 chat-bottom-icon">
                                 <i class="fa-solid fa-face-smile"></i>
                             </div>
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <input v-model="newMessage" @keydown.enter="sendNewMessage(newMessage, currentContactIndex)" type="text" placeholder="Scrivi un messaggio">
                             <div class="px-4 chat-bottom-icon">
                                 <i class="fa-solid fa-microphone"></i>
                             </div>
@@ -119,6 +118,7 @@
                 </div>
             </div>
         </section>
+        <!-- {{newMessage}} -->
     </main>
     <script type="text/javascript" src="js/script.js"></script>
 </body>

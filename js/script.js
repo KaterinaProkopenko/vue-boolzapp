@@ -2,6 +2,7 @@ const app = new Vue({
     el: '#app',
     data: {
         currentContactIndex: 0,
+        newMessage: '',
         contacts: [
             {
                 name: 'Michele',
@@ -172,7 +173,47 @@ const app = new Vue({
             this.currentContactIndex = indexActive;
         },
 
+        sendNewMessage(myNewMessage, activeIndex){
+            if(myNewMessage.trim() !== ""){  
+                
+                const newSentMessage = {
+                    message: '',
+                    status: 'sent'
+                }
+                newSentMessage.message = myNewMessage;
 
-    }
-})
+                this.contacts[activeIndex].messages.push(newSentMessage);
+
+                setTimeout(this.activeContactAnswer());
+
+                this.clearInput();
+                
+                /* document.querySelector('div.chat-main').innerHTML += 
+                `<div class="row justify-content-end p-0 m-0">
+                    <div class="col-5 message my-message p-0 my-2">
+                        <p class="message-content m-0 mb-1 p-2">${newSentMessage.message}</p>
+                    </div>
+                </div>`; */
+
+            } else {
+                console.log('Attenzione: la stringa è vuota. Inserisci qualcosa.') 
+            }
+            
+        },
+
+        clearInput(){
+            this.newMessage = '';
+        },
+
+        activeContactAnswer(){
+            /* const answerMessage = {
+                message: 'Ok',
+                status: 'received'
+            }
+            this.contacts[activeIndex].messages.push(answerMessage); */
+
+            console.log('ciao')
+        }
+    },
+});
 
